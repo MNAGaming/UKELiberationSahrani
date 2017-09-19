@@ -6,6 +6,9 @@ _msgFormatg = "<t size='0.60' color='#00ff00' align='right'>RESTART IN %1 MINS</
 _msgFormatr = "<t size='0.60' color='#ff0000' align='right'>RESTART IN %1 MINS</t>";
 _msgFormatb = "<t size='0.60' color='#0000ff' align='right'>RESTART IN %1 MINS</t>";
 
+// use of this line would let us put the message smack in the middle of the player's screen!
+//["<t color='#ff0000' size = '.8'>Warning!<br />Stop doing what you are doing</t>",-1,-1,7,1,0,789] spawn BIS_fnc_dynamicText;
+
 while {true} do {
 	uiSleep 30;
 	if ((_restartTime - floor(serverTime / 60)) in _msgTimes) then {
@@ -16,32 +19,32 @@ while {true} do {
 		for "_i" from 1 to 3 do {
 		[
 			format[_msgFormaty, _restartIn],
-			[safezoneX + safezoneW - 0.8,0.50],
-			[safezoneY + safezoneH - 0.8,0.7],
+			[safezoneX + safezoneW - 0.6,0.50],
+			[safezoneY + safezoneH - 0.6,0.7],
 			3,
 			0.2
 		] spawn BIS_fnc_dynamicText;
 		uisleep 2;
 		[
 			format[_msgFormatg, _restartIn],
-			[safezoneX + safezoneW - 0.8,0.50],
-			[safezoneY + safezoneH - 0.8,0.7],
+			[safezoneX + safezoneW - 0.6,0.50],
+			[safezoneY + safezoneH - 0.6,0.7],
 			3,
 			0.2
 		] spawn BIS_fnc_dynamicText;
 		uisleep 2;
 		[
 			format[_msgFormatr, _restartIn],
-			[safezoneX + safezoneW - 0.8,0.50],
-			[safezoneY + safezoneH - 0.8,0.7],
+			[safezoneX + safezoneW - 0.6,0.50],
+			[safezoneY + safezoneH - 0.6,0.7],
 			3,
 			0.2
 		] spawn BIS_fnc_dynamicText;
 		uisleep 2;
 		[
 			format[_msgFormatb, _restartTime - floor(serverTime / 60)],
-			[safezoneX + safezoneW - 0.8,0.50],
-			[safezoneY + safezoneH - 0.8,0.7],
+			[safezoneX + safezoneW - 0.6,0.50],
+			[safezoneY + safezoneH - 0.6,0.7],
 			3,
 			0.2
 		] spawn BIS_fnc_dynamicText;
