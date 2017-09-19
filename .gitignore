@@ -33,3 +33,5 @@ _ReSharper*/
 *.bak
 # NuGet
 packages/
+init.sqf.old
+*.old
